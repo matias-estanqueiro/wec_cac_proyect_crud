@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}Registrate{% endblock %}
+{% block css %}<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">{% endblock %}
+
+{% block content%}
+
+    <div class="container w-75 rounded bg-dark text-bg-dark p-2 my-5">
+        <h2 class="fw-bold text-center">Formulario de Registro</h2>
+        <!-- Form Register -->
+        <form method="POST">
+            <div class="row mx-1 my-1 d-block d-md-flex">
+                <div class="col">
+                    <div class="form-group m-2">
+                        <label for="signup_name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="signup_name" name="signup_name">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group m-2">
+                        <label for="signup_surname" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="signup_surname" name="signup_surname">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mx-1 my-1 d-block d-md-flex">
+                <div class="col">
+                    <div class="form-group m-2">
+                        <label for="signup_password1" class="form-label">Imagen de Perfil</label>
+                        <input type="file" class="form-control" id="signup_avatar" name="signup_avatar">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group m-2">
+                        <label for="signup_country" class="form-label">País</label>
+                        <input type="text" class="form-control" id="signup_country" name="signup_country">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mx-1 my-1 d-block d-md-flex">
+                <div class="col">
+                    <div class="form-group m-2">
+                        <label for="signup_email1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="signup_email1" name="signup_email1">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group m-2">
+                        <label for="signup_email2" class="form-label">Reingrese Email</label>
+                        <input type="email" class="form-control" id="signup_email2" name="signup_email2">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mx-1 my-1 d-block d-md-flex">
+                <div class="col">
+                    <div class="form-group m-2">
+                        <label for="signup_password1" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="signup_password1" name="signup_password1">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group m-2">
+                        <label for="signup_password2" class="form-label">Reingrese Contraseña</label>
+                        <input type="password" class="form-control" id="signup_password2" name="signup_password2">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center align-items-center"><button type="submit" class="btn btn-primary w-50 m-1">Registrarse</button></div>
+                </div>
+                <a class="text-center" href="/">Atrás</a>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
